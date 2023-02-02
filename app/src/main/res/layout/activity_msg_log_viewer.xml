@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MsgLogViewerActivity">
+<Button
+    android:id="@+id/refresh"
+    android:layout_alignParentEnd="true"
+    android:layout_width="wrap_content"
+    android:text="Clear Message"
+    android:padding="5sp"
+    android:textColor="@color/white"
+    android:background="@color/colorPrimary"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_marginTop="60dp"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/msg_log_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            tools:listitem="@layout/msg_log_item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

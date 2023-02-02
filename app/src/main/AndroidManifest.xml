@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.andro.whatswebapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        android:minSdkVersion="30"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <permission
+        android:name="com.andro.whatswebapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="com.andro.whatswebapp.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.andro.whatswebapp.activity.SplashActivity"
+            android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.andro.whatswebapp.DeletedMessageActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.MsgLogViewerActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.StartActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.GenrateQRActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.QRScannerActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.WhatzappwebActivity"
+            android:label="Whatzweb"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.WhatsappDirectActivity"
+            android:label="@string/action_whatsdirect"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.StorieSaverrrActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.SingleViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.Privacypolicy"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.StartScannerActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.andro.whatswebapp.activity.stylishfonts.StylishFontsActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name="com.andro.whatswebapp.activity.DisplayActivityNewimages"
+            android:theme="@style/AppTheme"/>
+        <activity android:name="com.andro.whatswebapp.activity.DisplayActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.andro.whatswebapp.activity.whatsappsticker.StickerPackListActivity"
+            android:label="@string/title_activity_sticker_packs_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.andro.whatswebapp.activity.whatsappsticker.StickerPackDetailsActivity"
+            android:parentActivityName="com.andro.whatswebapp.activity.whatsappsticker.StickerPackListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.andro.whatswebapp.activity.whatsappsticker.StickerPackListActivity" />
+        </activity>
+        <activity
+            android:name="com.andro.whatswebapp.activity.whatsappsticker.StickerPackInfoActivity"
+            android:label="@string/title_activity_sticker_pack_info"
+            android:parentActivityName="com.andro.whatswebapp.activity.whatsappsticker.StickerPackDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.andro.whatswebapp.activity.whatsappsticker.StickerPackDetailsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.andro.whatswebapp.activity.whatsappsticker.StickerContentProvider"
+            android:authorities="com.andro.whatswebapp.stickercontentprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+<!--
+        <provider
+            android:name="activity.whatsappsticker.StickerContentProvider"
+            android:authorities="com.androworld.whatswebapp.stickercontentprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+-->
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/appid"/>
+        <service
+            android:name=".NotificationListener"
+            android:label="@string/whatsapp_notification_listener_service"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MediaObserverService"
+            android:label="@string/media_observer_service" />
+    </application>
+</manifest>

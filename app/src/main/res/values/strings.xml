@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Whats Web</string>
+
+    <string name="ad_attribution">Ad</string>
+
+    <string name="appid">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="nativeid">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+
+
+
+    <string name="action_whatsdirect">Whats Direct</string>
+    <string name="add_button_content_description">Add sticker pack to WhatsApp</string>
+    <string name="add_to_whatsapp">Add to WhatsApp</string>
+
+    <string name="details_pack_already_added">Sticker pack added to WhatsApp</string>
+    <string name="dot">•</string>
+    <string name="error_network_no_internet">No Internet connection</string>
+    <string name="error_view_oops">Oops</string>
+    <string name="error_view_retry">RETRY</string>
+    <string name="info_screen_tray_icon">Tray icon</string>
+    <string name="info_send_email_to_prompt">Send email with</string>
+    <string name="install_app_first">Installed application first</string>
+    <string name="more_info_button">More info about sticker pack</string>
+    <string name="no_image_found">No WhatsApp Status Images Found</string>
+    <string name="no_result_found">No result found</string>
+    <string name="no_url">No url</string>
+    <string name="no_videos_found">No WhatsApp Status Videos Found</string>
+    <string name="phone_code">+%s</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="replay">Replay</string>
+    <string name="search_hint">Search…</string>
+    <string name="select_country">Select Country</string>
+    <string name="send_email">Send email</string>
+    <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
+    <string name="tips_not_wifi_cancel">Stop play</string>
+    <string name="tips_not_wifi_confirm">Resume</string>
+    <string name="title_activity_sticker_pack_details_multiple_pack">Sticker Details</string>
+    <string name="title_activity_sticker_pack_details_single_pack">Sticker Pack</string>
+    <string name="title_activity_sticker_pack_info">Info</string>
+    <string name="title_activity_sticker_packs_list">My WhatsApp Sticker App</string>
+    <string name="tray_image_content_description">Sticker Pack Tray Image</string>
+    <string name="view_webpage">View webpage</string>
+    <string name="whatsapp_share">Download Whats Web Scan App https://play.google.com/store/apps/details?id=com.andro.whatswebapp</string>
+
+
+
+    <!-- Manifest -->
+    <string name="whatsapp_notification_listener_service">WhatsApp Notification Listener</string>
+    <string name="media_observer_service">Media Observer Service</string>
+
+    <!-- activity_main.xml -->
+    <string name="view">View</string>
+    <string name="delete">Delete All</string>
+    <string name="media_observer">Media Observer</string>
+    <string name="notification_listener">Notification Listener</string>
+
+    <!-- MainActivity.kt -->
+    <string name="msg_log_status_str">Message log: %1$s</string>
+    <string name="img_dir_status_str">Images directory: %1$s</string>
+
+    <string name="clear_msg_log">Clear Message Log</string>
+    <string name="clear_msg_log_confirm">Are you sure you want to clear the message log?</string>
+    <string name="cleared">Cleared</string>
+    <string name="clear_failed">Failed to clear</string>
+
+    <string name="del_backup_img">Delete Backup Images</string>
+    <string name="del_backup_img_confirm">Are you sure you want to delete all the backup images?</string>
+    <string name="del_failed">Failed to delete</string>
+
+    <string name="started">Started</string>
+    <string name="stopped">Stopped</string>
+
+    <string name="create_backup_dir_failed">Failed to create backup directory</string>
+    <string name="create_msg_log_failed">Failed to create message log file</string>
+
+    <string name="create_backup_dir">Creating backup directory</string>
+    <string name="allow_storage_permission_msg">Messages and media cannot be saved without storage permission. Restart the app and allow.</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="unable_to_delete">Unable to delete: %1$s</string>
+
+    <!-- menu_msg_log_viewer.xml -->
+    <string name="action_refresh">Refresh</string>
+    <string name="action_clear">Clear</string>
+</resources>

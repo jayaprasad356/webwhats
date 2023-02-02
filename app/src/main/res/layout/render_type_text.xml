@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/daimajia_slider_image" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ProgressBar android:id="@+id/loading_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/description_layout" android:background="#77000000" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="30dp" android:layout_alignParentBottom="true">
+        <TextView android:textColor="#ffffff" android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

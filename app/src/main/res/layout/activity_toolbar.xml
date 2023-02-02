@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="70dp">
+    <ImageView android:id="@+id/iv_back" android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="15dp" android:src="@drawable/back"/>
+    <TextView android:textSize="20sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:text="title"/>
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="25dp" android:layout_alignParentRight="true">
+        <ImageView android:id="@+id/iv_refresh" android:padding="5dp" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/refresh"/>
+        <ImageView android:id="@+id/iv_screenshot" android:padding="5dp" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="15dp" android:src="@drawable/screenshot"/>
+    </LinearLayout>
+</LinearLayout>
