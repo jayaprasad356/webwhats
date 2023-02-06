@@ -51,6 +51,12 @@ class DeletedMessageActivity : AppCompatActivity() {
         val test = findViewById<LinearLayout>(R.id.test)
 
 
+        if (isNotificationServiceEnabled()) {
+            notificationListenerSwitch.isChecked = true
+            Toast.makeText(this, "Notification access granted", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Notification access not granted", Toast.LENGTH_SHORT).show();
+        }
 
         // TextView
         msgLogStatus.text = getString(R.string.msg_log_status_str,
@@ -148,11 +154,7 @@ class DeletedMessageActivity : AppCompatActivity() {
 
                 requestNotificationAccess();
                 notificationListenerSwitch.isChecked = true
-                if (isNotificationServiceEnabled()) {
-                    Toast.makeText(this, "Notification access granted", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(this, "Notification access not granted", Toast.LENGTH_SHORT).show();
-                }
+
 //                AlertDialogHelper.showDialog(
 //                    this@DeletedMessageActivity,
 //                    "Turn on",

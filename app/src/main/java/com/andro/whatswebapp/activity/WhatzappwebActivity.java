@@ -31,6 +31,7 @@ import com.andro.whatswebapp.Adclick;
 import com.andro.whatswebapp.Ads;
 import com.andro.whatswebapp.R;
 import com.google.android.gms.ads.AdView;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
@@ -93,7 +94,6 @@ public class WhatzappwebActivity extends AppCompatActivity {
         this.webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         this.webView.getSettings().setLoadWithOverviewMode(true);
         this.webView.getSettings().setNeedInitialFocus(false);
-        this.webView.getSettings().setAppCacheEnabled(true);
         this.webView.getSettings().setDatabaseEnabled(true);
         this.webView.getSettings().setDomStorageEnabled(true);
         this.webView.getSettings().setGeolocationEnabled(true);
@@ -266,7 +266,7 @@ public class WhatzappwebActivity extends AppCompatActivity {
             fileOutputStream.flush();
             fileOutputStream.close();
             MediaScannerConnection.scanFile(this, new String[]{str.toString()}, (String[]) null, new Abc());
-            Snackbar.make(rootView, (CharSequence) "Screenshot Taken!", 0).setAction((CharSequence) "Action", (View.OnClickListener) null).show();
+            Snackbar.make(rootView, (CharSequence) "Screenshot Taken!", BaseTransientBottomBar.LENGTH_LONG).setAction((CharSequence) "Action", (View.OnClickListener) null).show();
         } catch (Throwable th) {
             th.printStackTrace();
         }
