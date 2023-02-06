@@ -20,16 +20,16 @@ class MediaObserverService : Service() {
                 PendingIntent.getActivity(this, 0, notificationIntent, 0)
             }
 
-        val notification: Notification = NotificationCompat.Builder(this,
-            "mediaObserver")
-            .setContentTitle("Media Observer")
-            .setContentText("Watching for new images")
-            .setSmallIcon(R.drawable.ic_delete)
-            .setContentIntent(pendingIntent)
-            .setTicker("Watching for new images")
-            .build()
-
-        startForeground(1337, notification)
+//        val notification: Notification = NotificationCompat.Builder(this,
+//            "mediaObserver")
+//            .setContentTitle("Media Observer")
+//            .setContentText("Watching for new images")
+//            .setSmallIcon(R.drawable.ic_delete)
+//            .setContentIntent(pendingIntent)
+//            .setTicker("Watching for new images")
+//            .build()
+//
+//        startForeground(1337, notification)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {

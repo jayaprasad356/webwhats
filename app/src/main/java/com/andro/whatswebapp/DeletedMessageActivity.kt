@@ -8,21 +8,21 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import java.io.File
-import java.lang.Exception
-import android.content.res.Configuration
+import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.andro.whatswebapp.deleted.AlertDialogHelper
 import com.google.android.material.switchmaterial.SwitchMaterial
+import java.io.File
 
 private const val MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0
 
@@ -49,6 +49,14 @@ class DeletedMessageActivity : AppCompatActivity() {
         val medObsSwitch = findViewById<SwitchMaterial>(R.id.med_obs_switch)
         val notificationListenerSwitch = findViewById<SwitchMaterial>(R.id.notification_listener_switch)
         val test = findViewById<LinearLayout>(R.id.test)
+
+
+        if (isNotificationServiceEnabled()) {
+            notificationListenerSwitch.isChecked = true
+            Toast.makeText(this, "Notification access granted", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Notification access not granted", Toast.LENGTH_SHORT).show();
+        }
 
         // TextView
         msgLogStatus.text = getString(R.string.msg_log_status_str,
@@ -143,14 +151,18 @@ class DeletedMessageActivity : AppCompatActivity() {
                 ) { dialog, _ -> dialog.cancel() }
             }
             else {
-                AlertDialogHelper.showDialog(
-                    this@DeletedMessageActivity,
-                    "Turn on",
-                    "Settings > Apps & notifications > Special app access > " +
-                            "Notification Access > WhatsDeleted > Allow",
-                    getString(R.string.ok),
-                    null
-                ) { dialog, _ -> dialog.cancel() }
+
+                requestNotificationAccess();
+                notificationListenerSwitch.isChecked = true
+
+//                AlertDialogHelper.showDialog(
+//                    this@DeletedMessageActivity,
+//                    "Turn on",
+//                    "Settings > Apps & notifications > Special app access > " +
+//                            "Notification Access > WhatsDeleted > Allow",
+//                    getString(R.string.ok),
+//                    null
+//                ) { dialog, _ -> dialog.cancel() }
             }
         }
     }
@@ -256,5 +268,17 @@ class DeletedMessageActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun requestNotificationAccess() {
+        val intent = Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
+        startActivity(intent)
+    }
+
+
+
+    private fun isNotificationServiceEnabled(): Boolean {
+        val flat = Settings.Secure.getString(contentResolver, "enabled_notification_listeners")
+        return flat != null && flat.contains(packageName)
     }
 }

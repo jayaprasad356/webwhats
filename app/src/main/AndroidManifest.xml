@@ -60,10 +60,7 @@
             android:name="com.andro.whatswebapp.activity.SplashActivity"
             android:label="@string/app_name"
                 android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name="com.andro.whatswebapp.DeletedMessageActivity"
@@ -73,7 +70,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.andro.whatswebapp.activity.StartActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.andro.whatswebapp.activity.MainActivity"
             android:theme="@style/AppTheme" />
