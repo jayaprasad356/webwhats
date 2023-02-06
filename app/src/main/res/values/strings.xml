@@ -3,11 +3,11 @@
 
     <string name="ad_attribution">Ad</string>
 
-    <string name="appid">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="nativeid">ca-app-pub-3940256099942544/2247696110</string>
-    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
-
+    <string name="appid">ca-app-pub-1838677544163695~1077667976</string>
+    <string name="admob_app_id">ca-app-pub-1838677544163695~1077667976</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1838677544163695/6396834458</string>
+    <string name="nativeid">ca-app-pub-1838677544163695/6898014448</string>
+    <string name="interstitial_full_screen">ca-app-pub-1838677544163695/4892181093</string>
 
 
     <string name="action_whatsdirect">Whats Direct</string>
@@ -43,7 +43,6 @@
     <string name="tray_image_content_description">Sticker Pack Tray Image</string>
     <string name="view_webpage">View webpage</string>
     <string name="whatsapp_share">Download Whats Web Scan App https://play.google.com/store/apps/details?id=com.andro.whatswebapp</string>
-
 
 
     <!-- Manifest -->
