@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-        this.imgshare.setOnClickListener(new View.OnClickListener() {
+        this. imgshare.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                     Intent intent = new Intent("android.intent.action.SEND");
                     intent.setType("text/plain");
