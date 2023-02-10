@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.vedha.whatsweb">
+    package="com.vedha.whatsstatussaver">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <permission
-        android:name="com.vedha.whatsweb.permission.C2D_MESSAGE"
+        android:name="com.vedha.whatsstatussaver.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -43,17 +43,17 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
-        android:name="com.vedha.whatsweb.MyApplication"
+        android:name="com.vedha.whatsstatussaver.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.vedha.whatsweb.activity.TestActivity"
+            android:name="com.vedha.whatsstatussaver.activity.TestActivity"
             android:exported="true" >
 
         </activity>
@@ -63,17 +63,17 @@
             android:required="false" />
 
         <activity
-            android:name="com.vedha.whatsweb.activity.SplashActivity"
+            android:name="com.vedha.whatsstatussaver.activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.vedha.whatsweb.DeletedMessageActivity"
+            android:name="com.vedha.whatsstatussaver.DeletedMessageActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.MsgLogViewerActivity"
+            android:name="com.vedha.whatsstatussaver.MsgLogViewerActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.StartActivity"
+            android:name="com.vedha.whatsstatussaver.activity.StartActivity"
             android:theme="@style/AppTheme"
             android:exported="true">
             <intent-filter>
@@ -84,66 +84,66 @@
 
         </activity>
         <activity
-            android:name="com.vedha.whatsweb.activity.MainActivity"
+            android:name="com.vedha.whatsstatussaver.activity.MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.GenrateQRActivity"
+            android:name="com.vedha.whatsstatussaver.activity.GenrateQRActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.QRScannerActivity"
+            android:name="com.vedha.whatsstatussaver.activity.QRScannerActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.WhatzappwebActivity"
+            android:name="com.vedha.whatsstatussaver.activity.WhatzappwebActivity"
             android:label="Whatzweb"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.WhatsappDirectActivity"
+            android:name="com.vedha.whatsstatussaver.activity.WhatsappDirectActivity"
             android:label="@string/action_whatsdirect"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.StorieSaverrrActivity"
+            android:name="com.vedha.whatsstatussaver.activity.StorieSaverrrActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.SingleViewActivity"
+            android:name="com.vedha.whatsstatussaver.activity.SingleViewActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.Privacypolicy"
+            android:name="com.vedha.whatsstatussaver.activity.Privacypolicy"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.StartScannerActivity"
+            android:name="com.vedha.whatsstatussaver.activity.StartScannerActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.stylishfonts.StylishFontsActivity"
+            android:name="com.vedha.whatsstatussaver.activity.stylishfonts.StylishFontsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.DisplayActivityNewimages"
+            android:name="com.vedha.whatsstatussaver.activity.DisplayActivityNewimages"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.DisplayActivity"
+            android:name="com.vedha.whatsstatussaver.activity.DisplayActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.whatsappsticker.StickerPackListActivity"
+            android:name="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackListActivity"
             android:label="@string/title_activity_sticker_packs_list"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.vedha.whatsweb.activity.whatsappsticker.StickerPackDetailsActivity"
-            android:parentActivityName="com.vedha.whatsweb.activity.whatsappsticker.StickerPackListActivity">
+            android:name="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackDetailsActivity"
+            android:parentActivityName="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vedha.whatsweb.activity.whatsappsticker.StickerPackListActivity" />
+                android:value="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackListActivity" />
         </activity>
         <activity
-            android:name="com.vedha.whatsweb.activity.whatsappsticker.StickerPackInfoActivity"
+            android:name="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackInfoActivity"
             android:label="@string/title_activity_sticker_pack_info"
-            android:parentActivityName="com.vedha.whatsweb.activity.whatsappsticker.StickerPackDetailsActivity">
+            android:parentActivityName="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackDetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vedha.whatsweb.activity.whatsappsticker.StickerPackDetailsActivity" />
+                android:value="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerPackDetailsActivity" />
         </activity>
 
         <provider
-            android:name="com.vedha.whatsweb.activity.whatsappsticker.StickerContentProvider"
-            android:authorities="com.vedha.whatsweb.stickercontentprovider"
+            android:name="com.vedha.whatsstatussaver.activity.whatsappsticker.StickerContentProvider"
+            android:authorities="com.vedha.whatsstatussaver.stickercontentprovider"
             android:enabled="true"
             android:exported="true"
             android:readPermission="com.whatsapp.sticker.READ" />
@@ -160,7 +160,7 @@
             android:value="@string/admob_app_id" />
 
         <service
-            android:name="com.vedha.whatsweb.NotificationListener"
+            android:name="com.vedha.whatsstatussaver.NotificationListener"
             android:label="@string/whatsapp_notification_listener_service"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
             android:exported="true">
@@ -169,7 +169,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.vedha.whatsweb.MediaObserverService"
+            android:name="com.vedha.whatsstatussaver.MediaObserverService"
             android:label="@string/media_observer_service" />
     </application>
 
