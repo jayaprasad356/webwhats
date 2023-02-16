@@ -47,14 +47,14 @@ public class CustomPagerrrrAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup viewGroup, int i) {
         View inflate = this.mLayoutInflater.inflate(R.layout.pager_item, viewGroup, false);
         this.jzVideoPlayerStandard = (JZVideoPlayerStandard) inflate.findViewById(R.id.videoplayer);
-        this.sensorManager = (SensorManager) this.mContext.getSystemService("sensor");
+        this.sensorManager = (SensorManager) this.mContext.getSystemService(Context.SENSOR_SERVICE);
         this.sensorEventListener = new JZVideoPlayer.JZAutoFullscreenListener();
         try {
             this.jzVideoPlayerStandard.setUp(this.arrayList.get(i).getVideoPath(), 0, "");
             Bitmap bitmap = this.arrayList.get(i).getBitmap();
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-            Glide.with(this.mContext).load(byteArrayOutputStream.toByteArray()).asBitmap().into(this.jzVideoPlayerStandard.thumbImageView);
+           // Glide.with(this.mContext).load(byteArrayOutputStream.toByteArray()).asBitmap().into(this.jzVideoPlayerStandard.thumbImageView);
         } catch (Exception e2) {
             e2.printStackTrace();
         }

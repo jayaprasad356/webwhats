@@ -40,7 +40,7 @@ public class CustomPagerimageeeeAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup viewGroup, int i) {
         View inflate = this.mLayoutInflater.inflate(R.layout.pager_img_item, viewGroup, false);
         try {
-            Glide.with(this.mContext).load(this.arrayList.get(i).getImagePath()).asBitmap().into((ImageView) inflate.findViewById(R.id.image));
+           // Glide.with(this.mContext).load(this.arrayList.get(i).getImagePath()).asBitmap().into((ImageView) inflate.findViewById(R.id.image));
         } catch (Exception e) {
             e.printStackTrace();
         }

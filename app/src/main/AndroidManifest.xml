@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -13,7 +14,9 @@
         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         android:minSdkVersion="30"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <permission
@@ -52,6 +55,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
+
+        <activity android:name=".status.homeActiviy"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.vedha.whatsstatussaver.activity.TestActivity"
             android:exported="true" >
@@ -65,7 +77,10 @@
         <activity
             android:name="com.vedha.whatsstatussaver.activity.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name="com.vedha.whatsstatussaver.DeletedMessageActivity"
             android:theme="@style/AppTheme" />
@@ -76,11 +91,6 @@
             android:name="com.vedha.whatsstatussaver.activity.StartActivity"
             android:theme="@style/AppTheme"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity
@@ -171,6 +181,18 @@
         <service
             android:name="com.vedha.whatsstatussaver.MediaObserverService"
             android:label="@string/media_observer_service" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="a.graymatter.statusdownloader.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
     </application>
 
 </manifest>

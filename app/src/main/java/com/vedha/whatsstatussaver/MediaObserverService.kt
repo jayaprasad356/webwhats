@@ -3,19 +3,22 @@ package com.vedha.whatsstatussaver
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
+import android.os.Build
 import android.os.IBinder
+import androidx.annotation.RequiresApi
 import com.vedha.whatsstatussaver.deleted.MediaObserver
 
 class MediaObserverService : Service() {
 
     private val mediaObserver = MediaObserver()
 
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate() {
         super.onCreate()
 
         val pendingIntent: PendingIntent = Intent(this, DeletedMessageActivity::class.java)
             .let { notificationIntent ->
-                PendingIntent.getActivity(this, 0, notificationIntent, 0)
+                PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE)
             }
 
 //        val notification: Notification = NotificationCompat.Builder(this,

@@ -80,7 +80,6 @@ public class StorieSaverTabVideos extends Fragment {
     public void copyAllStatusIntoFile() {
         this.mTVideoSrlVideoView.setRefreshing(false);
         if (SdCardHelper.isSdCardPresent()) {
-            File externalStorageDirectory = Environment.getExternalStorageDirectory();
             File file = new File(Environment.getExternalStorageDirectory() + File.separator + "Android/media/com.whatsapp/WhatsApp/Media/.Statuses");
             if (file.isDirectory()) {
                 File[] listFiles = file.listFiles();

@@ -139,6 +139,7 @@ public class StorieSaverTabImages extends Fragment {
         ActivityCompat.requestPermissions(getActivity(), new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 0);
     }
 
+
     @Override
     public void onRequestPermissionsResult(int i, @NonNull String[] strArr, @NonNull int[] iArr) {
         if (i != 0) {
