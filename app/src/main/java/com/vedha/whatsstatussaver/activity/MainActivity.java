@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onclicl() {
                         MainActivity mainActivity = MainActivity.this;
-                        mainActivity.startActivity(new Intent(mainActivity, StorieSaverrrActivity.class));
+                        mainActivity.startActivity(new Intent(mainActivity,com.vedha.whatsstatussaver.status.homeActiviy.class));
                     }
                 });
             }
