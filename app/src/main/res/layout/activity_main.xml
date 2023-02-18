@@ -148,11 +148,18 @@
                         android:id="@+id/img_privacy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:scaleType="fitXY"
                         android:src="@drawable/privacypolicy" />
-
+                    <ImageView
+                        android:id="@+id/img_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icrateus" />
 
                 </LinearLayout>
 
@@ -270,13 +277,7 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <ImageView
-                        android:id="@+id/img_more"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/icrateus" />
+
 
 
                     <ImageView
