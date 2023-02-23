@@ -2,6 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="duplicateIds"
+    tools:viewBindingIgnore="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg">
@@ -83,7 +86,6 @@
                         android:background="@color/white">
 
                         <ImageView
-                            android:id="@+id/deleted_message"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:gravity="center"
@@ -92,8 +94,7 @@
                             android:layout_marginTop="20dp"
                             android:backgroundTint="@color/colorPrimary"
                             android:padding="20dp"
-                            android:scaleType="fitXY"
-                            android:tooltipText="DeletedMessage" />
+                            android:scaleType="fitXY" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -125,6 +126,8 @@
                         android:src="@drawable/directchat" />
 
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -238,7 +241,7 @@
                         android:background="@color/white">
 
                         <ImageView
-                            android:id="@+id/deleted_message"
+                            android:id="@+id/deleted_messages"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:gravity="center"
@@ -247,8 +250,7 @@
                             android:layout_marginTop="20dp"
                             android:backgroundTint="@color/colorPrimary"
                             android:padding="20dp"
-                            android:scaleType="fitXY"
-                            android:tooltipText="DeletedMessage" />
+                            android:scaleType="fitXY" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

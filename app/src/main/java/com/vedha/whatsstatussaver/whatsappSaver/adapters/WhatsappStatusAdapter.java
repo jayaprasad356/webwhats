@@ -65,7 +65,7 @@ public class WhatsappStatusAdapter extends RecyclerView.Adapter<WhatsappStatusAd
         if (layoutInflater == null) {
             layoutInflater = LayoutInflater.from(viewGroup.getContext());
         }
-        return new ViewHolder(DataBindingUtil.inflate(layoutInflater, R.layout.items_whatsapp_view, viewGroup, false));
+        return new ViewHolder(ItemsWhatsappViewBinding.inflate(layoutInflater,viewGroup, false));
     }
 
     @Override

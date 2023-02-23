@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:src="@drawable/ic_share"
+                    android:src="@drawable/share"
                     android:tint="@color/black"
                     app:backgroundTint="#fff"
                     app:fabSize="mini" />
@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:src="@drawable/whatsapp_logo"
+                    android:src="@drawable/whatsapp"
                     app:backgroundTint="@color/white"
                     app:fabSize="mini" />
 
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:src="@drawable/ic_delete_black_24dp"
+                    android:src="@drawable/delete_message"
                     android:tint="@color/black"
                     app:backgroundTint="#fff"
                     app:fabSize="mini" />
@@ -63,7 +63,7 @@
                 android:id="@+id/im_close"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_back"
+                android:src="@drawable/back"
               app:tint="@color/black"/>
         </RelativeLayout>
 

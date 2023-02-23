@@ -1,6 +1,5 @@
 package com.vedha.whatsstatussaver.whatsappSaver.fragments;
 
-import static androidx.databinding.DataBindingUtil.inflate;
 
 import android.net.Uri;
 import android.os.Build;
@@ -11,13 +10,10 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.vedha.saver.R;
-import com.vedha.saver.adapters.WhatsappStatusAdapter;
-import com.vedha.saver.all_interfaces.FileListWhatsappClickInterface;
-import com.vedha.saver.databinding.FragmentWhatsappImageBinding;
-import com.vedha.saver.wa_model.WhatsappStatusModel;
 import com.vedha.whatsstatussaver.databinding.FragmentWhatsappImageBinding;
+import com.vedha.whatsstatussaver.whatsappSaver.adapters.WhatsappStatusAdapter;
 import com.vedha.whatsstatussaver.whatsappSaver.all_interfaces.FileListWhatsappClickInterface;
+import com.vedha.whatsstatussaver.whatsappSaver.wa_model.WhatsappStatusModel;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,7 +33,7 @@ public class WhatsappQImageFragment extends Fragment implements FileListWhatsapp
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = inflate(inflater, R.layout.fragment_whatsapp_image, container, false);
+        binding = FragmentWhatsappImageBinding.inflate(inflater,container,false);
         initViews();
         return binding.getRoot();
     }

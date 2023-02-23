@@ -34,7 +34,7 @@ public class GalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityGalleryBinding.inflate(getLayoutInflater());
         activity = this;
-
+        setContentView(binding.getRoot());
 
 //        loadAd();
 //        BannerAd();

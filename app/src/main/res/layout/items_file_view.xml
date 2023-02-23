@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:elevation="3dp"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="5dp">
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="3dp"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
         android:id="@+id/rl_main"
         android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:src="@drawable/ic_play_circle_filled_black_24dp"
+            android:src="@drawable/jz_play_normal"
             android:layout_centerInParent="true"
             android:scaleType="centerInside" />
 
@@ -38,5 +37,3 @@
             android:textSize="15sp" />
     </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-</layout>

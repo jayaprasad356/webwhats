@@ -33,7 +33,7 @@ public class WhatsappImageFragment extends Fragment implements FileListWhatsappC
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = inflate(inflater, R.layout.fragment_whatsapp_image, container, false);
+        binding = FragmentWhatsappImageBinding.inflate(inflater, container, false);
         initViews();
         return binding.getRoot();
     }

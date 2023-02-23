@@ -13,6 +13,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.vedha.whatsstatussaver.R;
+
 
 public class VideoPlayerActivity extends AppCompatActivity {
 

@@ -11,9 +11,6 @@
        />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission
-        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-    <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -55,7 +52,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="p">
 
-        <activity android:name=".status.homeActiviy"
+
+        <activity android:name=".whatsappSaver.WhatsappActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".whatsappSaver.VideoPlayerActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".whatsappSaver.GalleryActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".whatsappSaver.FullViewActivity"
             android:exported="true">
         </activity>
         <activity
@@ -72,7 +79,6 @@
             android:name="com.vedha.whatsstatussaver.activity.StartActivity"
             android:theme="@style/AppTheme"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

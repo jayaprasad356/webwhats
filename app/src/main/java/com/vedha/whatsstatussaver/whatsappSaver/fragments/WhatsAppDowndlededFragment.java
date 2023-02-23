@@ -63,7 +63,7 @@ public class WhatsAppDowndlededFragment extends Fragment implements FileListClic
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = inflate(inflater, R.layout.fragment_history, container, false);
+        binding = FragmentHistoryBinding.inflate(inflater, container, false);
         initViews();
         return binding.getRoot();
     }

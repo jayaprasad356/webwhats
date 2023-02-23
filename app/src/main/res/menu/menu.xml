@@ -4,13 +4,13 @@
     <group android:checkableBehavior="single">
         <item
             android:title="Gallery"
-            android:icon="@drawable/ic_gallery"
+            android:icon="@drawable/gallery_icon"
             android:id="@+id/mGallery"
            />
 
         <item
             android:title="Whatsapp"
-            android:icon="@drawable/ic_whatsapp"
+            android:icon="@drawable/whatsapp"
             android:id="@+id/mWa"
             />
 

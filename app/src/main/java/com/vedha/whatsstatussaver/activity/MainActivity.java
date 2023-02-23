@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(bundle);
         requestWindowFeature(1);
         getWindow().setFlags(1024, 1024);
-        setContentView((int) R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
 
         ads  = new Ads();
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         this.imgshare = (ImageView) findViewById(R.id.img_share);
         this.imgmore = (ImageView) findViewById(R.id.img_more);
 
-        this.deletedMessage=(ImageView)findViewById(R.id.deleted_message);
+        this.deletedMessage=(ImageView)findViewById(R.id.deleted_messages);
 
         this.imgwhatsscan.getLayoutParams().height = (width/2)-80;
         this.imgstatussaver.getLayoutParams().height = (width/2)-80;
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onclicl() {
                         MainActivity mainActivity = MainActivity.this;
-                        mainActivity.startActivity(new Intent(mainActivity,com.vedha.whatsstatussaver.status.homeActiviy.class));
+                        mainActivity.startActivity(new Intent(mainActivity,com.vedha.whatsstatussaver.whatsappSaver.WhatsappActivity.class));
                     }
                 });
             }

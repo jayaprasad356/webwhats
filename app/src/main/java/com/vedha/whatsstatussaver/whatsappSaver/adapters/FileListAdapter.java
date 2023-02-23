@@ -39,7 +39,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.ViewHo
         if (layoutInflater == null) {
             layoutInflater = LayoutInflater.from(viewGroup.getContext());
         }
-        return new ViewHolder(DataBindingUtil.inflate(layoutInflater, R.layout.items_file_view, viewGroup, false));
+        return new ViewHolder(ItemsFileViewBinding.inflate(layoutInflater, viewGroup, false));
     }
 
     @Override

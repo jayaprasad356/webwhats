@@ -73,6 +73,7 @@ public class WhatsappActivity extends AppCompatActivity {
         binding = ActivityWhatsappBinding.inflate(getLayoutInflater());
         activity = this;
         createFileFolder();
+        setContentView(binding.getRoot());
 //        loadAd();
 
         if (Build.VERSION.SDK_INT >= 23) {
@@ -82,16 +83,15 @@ public class WhatsappActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
 
 
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(toggle);
+        binding.drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView = findViewById(R.id.nav_view);
         // choose colour on icon bars by this line
 //        navigationView.setItemIconTintList(null);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        binding.navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
@@ -102,7 +102,8 @@ public class WhatsappActivity extends AppCompatActivity {
                         break;
                     case R.id.mWa:
                         if (Build.VERSION.SDK_INT >= 29) {
-                           allowacess();
+                            Utils.OpenApp(activity,"com.whatsapp");
+                            //allowacess();
                         } else {
                             Utils.OpenApp(activity,"com.whatsapp");
                         }
@@ -166,8 +167,8 @@ public class WhatsappActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(activity, R.style.SheetDialog);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         DialogWhatsappPermissionBinding dialogWhatsappPermissionBinding =
-                DialogWhatsappPermissionBinding.inflate(LayoutInflater.from(activity), null, false, R.layout.dialog_whatsapp_permission);
-        dialog.setContentView(dialogWhatsappPermissionBinding);
+                DialogWhatsappPermissionBinding.inflate(LayoutInflater.from(this),null,false);
+        dialog.setContentView(dialogWhatsappPermissionBinding.getRoot());
         dialogWhatsappPermissionBinding.tvAllow.setOnClickListener(v -> {
             try {
                 if (Build.VERSION.SDK_INT>Build.VERSION_CODES.Q) {

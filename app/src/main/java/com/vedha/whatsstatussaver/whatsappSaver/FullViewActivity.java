@@ -1,8 +1,8 @@
 package com.vedha.whatsstatussaver.whatsappSaver;
 
-import static com.vedha.saver.util_items.Utils.shareImage;
-import static com.vedha.saver.util_items.Utils.shareImageVideoOnWhatsapp;
-import static com.vedha.saver.util_items.Utils.shareVideo;
+import static com.vedha.whatsstatussaver.whatsappSaver.util_items.Utils.shareImage;
+import static com.vedha.whatsstatussaver.whatsappSaver.util_items.Utils.shareImageVideoOnWhatsapp;
+import static com.vedha.whatsstatussaver.whatsappSaver.util_items.Utils.shareVideo;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,12 +12,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.viewpager.widget.ViewPager;
 
-import com.vedha.saver.adapters.ShowImagesAdapter;
-import com.vedha.saver.databinding.ActivityFullViewBinding;
-import com.vedha.saver.util_items.Utils;
+import com.vedha.whatsstatussaver.R;
+import com.vedha.whatsstatussaver.databinding.ActivityFullViewBinding;
+import com.vedha.whatsstatussaver.whatsappSaver.adapters.ShowImagesAdapter;
+import com.vedha.whatsstatussaver.whatsappSaver.util_items.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class FullViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_full_view);
+        binding = ActivityFullViewBinding.inflate(getLayoutInflater());
         activity = this;
 
 
