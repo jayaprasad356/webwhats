@@ -14,8 +14,8 @@ android {
         applicationId "com.vedha.whatsstatussaver"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 3
-        versionName "3.0"
+        versionCode 5
+        versionName "5.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         def contentProviderAuthority = applicationId + ".stickercontentprovider"
